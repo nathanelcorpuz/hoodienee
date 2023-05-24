@@ -8,15 +8,20 @@ import searchDark from "../../public/icons/search-dark.png";
 import { useContext } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import IconButton from "../common/IconButton";
+import { HeaderControls } from "@/lib/types";
 
-export default function HeaderLinks2() {
+export default function HeaderLinks2({
+  headerControls,
+}: {
+  headerControls: HeaderControls;
+}) {
   const { theme } = useContext(ThemeContext);
 
   const isThemeDark = theme === "dark";
 
   return (
     <div className="flex">
-      <IconButton>
+      <IconButton props={{ onClick: headerControls.openCart }}>
         {isThemeDark ? (
           <Image src={cart} alt="cart icon" width={15} height={15} />
         ) : (
@@ -36,10 +41,10 @@ export default function HeaderLinks2() {
         )}
       </IconButton>
       <p
-        className="px-4 py-2 
-      dark:hover:bg-gray-700 
+        className="cursor-pointer px-4 
+      py-2 
       hover:bg-gray-300
-      cursor-pointer"
+      dark:hover:bg-gray-700"
       >
         Menu
       </p>
