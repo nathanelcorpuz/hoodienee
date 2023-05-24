@@ -1,20 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import ThemeToggler from "./ThemeToggler";
+import HeaderLinks1 from "./HeaderLinks1";
+import HeaderLinks2 from "./HeaderLinks2";
 
 export default function Header() {
   return (
     <header className="flex justify-between">
-      <div className="flex">
-        <Link
-          className="px-4 py-2 font-black block dark:hover:bg-gray-700"
-          href="/"
-        >
-          H
-        </Link>
-        <ThemeToggler />
-      </div>
+      <HeaderLinks1 />
+      <HeaderLinks2 />
     </header>
   );
 }
