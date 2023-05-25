@@ -5,9 +5,10 @@ export default function RootLayoutWrapper({
 }) {
   return (
     <div
-      className="bg-white text-black 
+      className="flex flex-col 
+  justify-between bg-white
+  text-black [min-height:100vh] 
   dark:bg-black dark:text-white
-  [min-height:100vh] flex flex-col justify-between
   "
     >
       {children}
