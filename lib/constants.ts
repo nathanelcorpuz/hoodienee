@@ -5,6 +5,9 @@ import productImg4 from "@/public/square/4.png";
 import productImg5 from "@/public/square/5.png";
 import productImg6 from "@/public/square/6.png";
 import productImg7 from "@/public/square/7.png";
+import triangle from "@/public/icons/triangle.png";
+import circle from "@/public/icons/circle.png";
+import square from "@/public/icons/square.png";
 
 export const sampleFetchedProducts = [
   {
@@ -34,5 +37,26 @@ export const sampleFetchedProducts = [
   {
     _id: 7,
     img: productImg7,
+  },
+];
+
+export const benefits = [
+  {
+    img: triangle,
+    alt: "triangle icon",
+    title: "Premium Quality",
+    subtitle: "Unparalleled comfort",
+  },
+  {
+    img: circle,
+    alt: "circle icon",
+    title: "Finest Materials",
+    subtitle: "Breathable fabrics",
+  },
+  {
+    img: square,
+    alt: "triangle icon",
+    title: "Expert Craftmanship",
+    subtitle: "Meticulously made",
   },
 ];

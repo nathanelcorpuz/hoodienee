@@ -30,3 +30,12 @@ export interface ProductCarouselProps {
   products: FetchedProduct[];
   heading: string;
 }
+
+export interface BenefitProps {
+  benefit: {
+    alt: string;
+    img: StaticImageData | string;
+    title: string;
+    subtitle: string;
+  };
+}
