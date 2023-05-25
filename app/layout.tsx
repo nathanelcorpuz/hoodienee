@@ -1,7 +1,7 @@
-import Footer from "@/components/root/Footer";
-import RootLayoutWrapper from "@/components/root/RootLayoutWrapper";
-import ThemeWrapper from "@/components/root/ThemeWrapper";
-import Header from "@/components/root/Header";
+import Footer from "@/components/root-layout/Footer";
+import RootLayoutWrapper from "@/components/root-layout/RootLayoutWrapper";
+import ThemeWrapper from "@/components/root-layout/ThemeWrapper";
+import Header from "@/components/root-layout/Header";
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";

@@ -1,10 +1,10 @@
-import img from "../../../../public/square/1.png";
-import arrowUp from "../../../../public/icons/arrow-up.png";
-import arrowDown from "../../../../public/icons/arrow-down.png";
-import arrowUpDark from "../../../../public/icons/arrow-up-dark.png";
-import arrowDownDark from "../../../../public/icons/arrow-down-dark.png";
-import x from "../../../../public/icons/x.png";
-import xDark from "../../../../public/icons/x-dark.png";
+import img from "../../../public/square/1.png";
+import arrowUp from "../../../public/icons/arrow-up.png";
+import arrowDown from "../../../public/icons/arrow-down.png";
+import arrowUpDark from "../../../public/icons/arrow-up-dark.png";
+import arrowDownDark from "../../../public/icons/arrow-down-dark.png";
+import x from "../../../public/icons/x.png";
+import xDark from "../../../public/icons/x-dark.png";
 import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "providers/ThemeProvider";

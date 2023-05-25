@@ -3,5 +3,5 @@ export default function PageWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="flex grow flex-col">{children}</div>;
+  return <div className="flex grow flex-col pt-[41px]">{children}</div>;
 }

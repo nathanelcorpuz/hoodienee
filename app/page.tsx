@@ -1,5 +1,10 @@
 import PageWrapper from "@/components/common/PageWrapper";
+import MainHero from "./_components/MainHero";
 
 export default function Home() {
-  return <PageWrapper>Hello world</PageWrapper>;
+  return (
+    <PageWrapper>
+      <MainHero />
+    </PageWrapper>
+  );
 }
