@@ -3,7 +3,7 @@ import ModalWrapper from "@/components/wrappers/ModalWrapper";
 
 export default function CartModal() {
   return (
-    <ModalWrapper>
+    <ModalWrapper heading="Your Cart">
       <Cart />
     </ModalWrapper>
   );

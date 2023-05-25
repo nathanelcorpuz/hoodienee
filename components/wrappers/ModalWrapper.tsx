@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation";
 
 export default function ModalWrapper({
   children,
+  heading,
 }: {
   children: React.ReactNode;
+  heading?: string;
 }) {
   const router = useRouter();
   const { ref } = useClickOutside(() => router.back());
@@ -26,7 +28,7 @@ export default function ModalWrapper({
         dark:bg-black"
       >
         <div className="flex justify-between">
-          <p className="p-2 font-black">Your Cart</p>
+          <p className="p-2 font-black">{heading}</p>
           <button
             className="p-2 text-gray-600 dark:text-gray-400"
             onClick={() => router.back()}
