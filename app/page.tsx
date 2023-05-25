@@ -1,3 +1,5 @@
+import PageWrapper from "@/components/common/PageWrapper";
+
 export default function Home() {
-  return <div>Hello world</div>;
+  return <PageWrapper>Hello world</PageWrapper>;
 }
