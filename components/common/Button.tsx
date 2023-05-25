@@ -6,14 +6,16 @@ export default function Button({
   className?: string;
 }) {
   return (
-    <button
-      className={`mx-auto w-[100%] 
+    <div>
+      <button
+        className={`mx-auto w-[100%] 
     bg-black px-6 py-3 text-lg
     font-black
     uppercase text-white
     dark:bg-white dark:text-black ${className}`}
-    >
-      {children}
-    </button>
+      >
+        {children}
+      </button>
+    </div>
   );
 }
