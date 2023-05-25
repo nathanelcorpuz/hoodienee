@@ -7,7 +7,7 @@ import search from "../../public/icons/search.png";
 import searchDark from "../../public/icons/search-dark.png";
 import { useContext } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
-import IconButton from "../common/IconButton";
+import IconButton from "../../components/IconButton";
 import { HeaderControls } from "@/lib/types";
 
 export default function HeaderLinks2({

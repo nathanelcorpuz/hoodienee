@@ -1,7 +1,7 @@
 import sample from "@/public/square/3.png";
 import Image, { StaticImageData } from "next/image";
-import StandardText from "./texts/StandardText";
-import SupportText from "./texts/SupportText";
+import StandardText from "@/components/texts/StandardText";
+import SupportText from "@/components/texts/SupportText";
 import addToCartIcon from "@/public/icons/add-to-cart.png";
 
 export default function ProductCard({

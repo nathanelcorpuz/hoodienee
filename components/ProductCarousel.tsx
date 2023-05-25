@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import HeadingText from "@/components/common/texts/HeadingText";
-import ProductCard from "@/components/common/ProductCard";
+import HeadingText from "@/components/texts/HeadingText";
+import ProductCard from "@/components/ProductCard";
 import Image from "next/image";
 import arrowLeft from "@/public/icons/arrow-left.png";
 import arrowRight from "@/public/icons/arrow-right.png";

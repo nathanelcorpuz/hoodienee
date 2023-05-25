@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BenefitProps } from "@/lib/types";
-import HeadingText from "@/components/common/texts/HeadingText";
-import StandardText from "@/components/common/texts/StandardText";
+import HeadingText from "@/components/texts/HeadingText";
+import StandardText from "@/components/texts/StandardText";
 
 export default function Benefit({ benefit }: BenefitProps) {
   return (

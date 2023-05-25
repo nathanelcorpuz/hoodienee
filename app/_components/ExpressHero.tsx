@@ -1,7 +1,7 @@
-import Button from "@/components/common/Button";
-import HeadingText from "@/components/common/texts/HeadingText";
-import StandardText from "@/components/common/texts/StandardText";
-import HeroWrapper from "@/components/common/wrappers/HeroWrapper";
+import Button from "@/components/Button";
+import HeadingText from "@/components/texts/HeadingText";
+import StandardText from "@/components/texts/StandardText";
+import HeroWrapper from "@/components/wrappers/HeroWrapper";
 import img from "@/public/wide/9.png";
 
 export default function ExpressHero() {

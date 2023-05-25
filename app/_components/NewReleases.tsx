@@ -1,4 +1,4 @@
-import ProductCarousel from "@/components/common/ProductCarousel";
+import ProductCarousel from "@/components/ProductCarousel";
 import { sampleFetchedProducts } from "@/lib/constants";
 
 export default function NewReleases() {

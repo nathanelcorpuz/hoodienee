@@ -5,7 +5,7 @@ import sun from "../../public/icons/sun.png";
 import Image from "next/image";
 import { ThemeContext } from "providers/ThemeProvider";
 import { useContext } from "react";
-import IconButton from "../common/IconButton";
+import IconButton from "../../components/IconButton";
 
 export default function ThemeToggler() {
   const { theme, setTheme } = useContext(ThemeContext);

@@ -1,5 +1,5 @@
 import Cart from "@/app/cart/_components/Cart";
-import ModalWrapper from "@/components/common/wrappers/ModalWrapper";
+import ModalWrapper from "@/components/wrappers/ModalWrapper";
 
 export default function CartModal() {
   return (
