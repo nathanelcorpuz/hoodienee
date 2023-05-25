@@ -1,6 +1,6 @@
 "use client";
 
-import useClickOutside from "hooks/useClickOutside";
+import useClickOutside from "@/hooks/useClickOutside";
 import { useRouter } from "next/navigation";
 
 export default function ModalWrapper({
@@ -14,7 +14,7 @@ export default function ModalWrapper({
   return (
     <div
       className="fixed bottom-0 left-0 right-0 top-0
-       [background:rgb(0,0,0,0.9)]"
+       z-[999] [background:rgb(0,0,0,0.9)]"
     >
       <div
         ref={ref}

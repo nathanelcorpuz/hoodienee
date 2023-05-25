@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/common/PageWrapper";
+import PageWrapper from "@/components/common/wrappers/PageWrapper";
 import Cart from "./_components/Cart";
 
 export default function CartPage() {

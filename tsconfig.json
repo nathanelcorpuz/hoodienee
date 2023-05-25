@@ -10,7 +10,10 @@
       "@/pages/*": ["pages/*"],
       "@/app/*": ["app/*"],
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/public/*": ["public/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/providers/*": ["providers/*"]
     },
     "strict": true,
     "forceConsistentCasingInFileNames": true,

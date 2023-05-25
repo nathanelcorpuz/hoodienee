@@ -1,6 +1,6 @@
 import img from "../../public/wide/3.png";
 import Button from "@/components/common/Button";
-import HeroWrapper from "@/components/common/HeroWrapper";
+import HeroWrapper from "@/components/common/wrappers/HeroWrapper";
 
 export default function MainHero() {
   return (
