@@ -2,14 +2,14 @@ import { TextVariant } from "@/lib/types";
 
 export default function HeadingText({
   children,
-  variant = 6,
+  variant = 4,
   className,
 }: {
   children: React.ReactNode;
   variant?: TextVariant;
   className?: string;
 }) {
-  const commonClasses = "font-black";
+  const commonClasses = "font-extrabold tracking-wide uppercase";
   if (variant === 1) {
     return (
       <h1

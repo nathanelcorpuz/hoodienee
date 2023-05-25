@@ -1,13 +1,13 @@
 export default function Button({
   children,
-  className,
+  className = "",
 }: {
   children: React.ReactNode;
   className?: string;
 }) {
   return (
     <button
-      className={`mx-auto w-[90%] 
+      className={`mx-auto w-[100%] 
     bg-black px-6 py-3 text-lg
     font-black
     uppercase text-white

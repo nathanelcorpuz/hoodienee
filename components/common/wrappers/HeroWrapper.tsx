@@ -3,9 +3,11 @@ import Image, { StaticImageData } from "next/image";
 export default function HeroWrapper({
   children,
   img = "",
+  isMainHero = false,
 }: {
   children: React.ReactNode;
-  img?: StaticImageData | string;
+  img: StaticImageData | string;
+  isMainHero?: boolean;
 }) {
   return (
     <div
@@ -34,6 +36,9 @@ export default function HeroWrapper({
             alt="sample wide image"
           />
           <span className="absolute bottom-0 left-0 right-0 top-0 [background:linear-gradient(180deg,_rgba(32,32,32,0)_30%,#202020_100%)]" />
+          {isMainHero ? null : (
+            <span className="absolute bottom-0 left-0 right-0 top-0 [background:linear-gradient(360deg,_rgba(32,32,32,0)_30%,#202020_100%)]" />
+          )}
         </div>
       </div>
     </div>
