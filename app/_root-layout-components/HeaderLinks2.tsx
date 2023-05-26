@@ -9,6 +9,8 @@ import { useContext } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import IconButton from "../../components/IconButton";
 import { HeaderControls } from "@/lib/types";
+import ModalWrapper from "@/components/wrappers/ModalWrapper";
+import Menu from "../menu/_components/Menu";
 
 export default function HeaderLinks2({
   headerControls,
@@ -50,6 +52,14 @@ export default function HeaderLinks2({
           Menu
         </p>
       </div>
+      {/* {headerControls.isMenuOpen && (
+        <ModalWrapper
+          isIntercept={false}
+          closeModal={headerControls.toggleMenu}
+        >
+          <Menu />
+        </ModalWrapper>
+      )} */}
     </>
   );
 }

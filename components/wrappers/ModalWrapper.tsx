@@ -6,9 +6,13 @@ import { useRouter } from "next/navigation";
 export default function ModalWrapper({
   children,
   heading,
+  isIntercept = true,
+  closeModal,
 }: {
   children: React.ReactNode;
   heading?: string;
+  isIntercept?: boolean;
+  closeModal?: () => void;
 }) {
   const router = useRouter();
   const { ref } = useClickOutside(() => router.back());
@@ -31,7 +35,9 @@ export default function ModalWrapper({
           <p className="p-2 font-black">{heading}</p>
           <button
             className="p-2 text-gray-600 dark:text-gray-400"
-            onClick={() => router.back()}
+            onClick={() =>
+              isIntercept ? router.back() : closeModal && closeModal()
+            }
           >
             Close
           </button>

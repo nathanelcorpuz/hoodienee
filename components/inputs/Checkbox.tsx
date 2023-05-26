@@ -3,6 +3,7 @@ import {
   InputHTMLAttributes,
   LabelHTMLAttributes,
 } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Checkbox({
   divProps = {},
@@ -21,7 +22,7 @@ export default function Checkbox({
 }) {
   return (
     <div
-      className={`flex items-center gap-[10px] ${divProps.className}`}
+      className={twMerge(`flex items-center gap-[10px] ${divProps.className}`)}
       {...divProps}
     >
       <input
@@ -29,7 +30,9 @@ export default function Checkbox({
         id={id}
         name={id}
         value={value}
-        className={`h-[20px] w-[20px] bg-black ${inputProps.className}`}
+        className={twMerge(
+          `h-[20px] w-[20px] bg-black ${inputProps.className}`
+        )}
         {...inputProps}
       />
       <label htmlFor="category1" {...labelProps}>

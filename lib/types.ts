@@ -16,6 +16,8 @@ export interface HeaderControls {
   openCart: () => void;
   openSearch: () => void;
   openMenu: () => void;
+  toggleMenu: () => void;
+  isMenuOpen: boolean;
 }
 
 export type ButtonVariant = 1 | 2 | 3 | 4;

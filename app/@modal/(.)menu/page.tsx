@@ -3,7 +3,7 @@ import ModalWrapper from "@/components/wrappers/ModalWrapper";
 
 export default function MenuModal() {
   return (
-    <ModalWrapper heading="Menu">
+    <ModalWrapper>
       <Menu />
     </ModalWrapper>
   );
