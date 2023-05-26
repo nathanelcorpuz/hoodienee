@@ -1,6 +1,6 @@
-import { InputHTMLAttributes, LabelHTMLAttributes } from "react";
+import { TextareaHTMLAttributes, LabelHTMLAttributes } from "react";
 
-export default function Input({
+export default function TextArea({
   className = "",
   props,
   labelProps,
@@ -9,18 +9,19 @@ export default function Input({
   className?: string;
   labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
   label?: string;
-  props?: InputHTMLAttributes<HTMLInputElement>;
+  props?: TextareaHTMLAttributes<HTMLTextAreaElement>;
 }) {
   return (
     <div className="flex w-[100%] flex-col">
       <label htmlFor={label} {...labelProps}>
         {label}
       </label>
-      <input
+      <textarea
         className={`
-      h-[40px] border border-gray-600
+      border border-gray-600
       bg-white p-2
       dark:bg-black ${className}`}
+        rows={8}
         id={label}
         {...props}
       />
