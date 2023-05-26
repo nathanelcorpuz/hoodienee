@@ -14,6 +14,7 @@ export default function HeroWrapper({
       className="relative 
       flex flex-col 
       items-center gap-[10px]
+      px-4
       py-[100px]
 "
     >

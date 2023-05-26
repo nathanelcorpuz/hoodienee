@@ -13,6 +13,8 @@ export interface HeaderControls {
   openMenu: () => void;
 }
 
+export type ButtonVariant = 1 | 2 | 3 | 4;
+
 export type TextVariant = 1 | 2 | 3 | 4 | 5 | 6;
 
 export interface TextComponent {

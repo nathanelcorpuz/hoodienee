@@ -48,7 +48,7 @@ export default function Footer() {
           <p className="text-2xl font-black tracking-tighter text-black">
             HOODiENEE
           </p>
-          <p>Premium hoodie comfort</p>
+          <p>Premium hoodies</p>
           <div className="flex gap-[20px]">
             {socialLinks.map((link) => (
               <a
@@ -68,7 +68,9 @@ export default function Footer() {
           <p>123 Drive, Los Angeles, California</p>
           <p>support@hoodienee.com</p>
         </div>
-        <div className="mx-8 text-gray-500">© 2023 All Rights Reserved</div>
+        <div className="mx-8 text-xs text-gray-500">
+          © 2023 All Rights Reserved
+        </div>
       </div>
       <div
         className="

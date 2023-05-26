@@ -6,8 +6,9 @@ export default function MainHero() {
   return (
     <HeroWrapper isMainHero img={img}>
       <h1 className="text-4xl font-black">HOODiENEE</h1>
-      <p className="text-gray-300">Only the best hoodies</p>
-      <Button className="w-[auto]">Shop</Button>
+      <Button className="w-[fit-content]" variant={2}>
+        Shop
+      </Button>
     </HeroWrapper>
   );
 }

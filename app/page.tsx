@@ -1,20 +1,20 @@
 import PageWrapper from "@/components/wrappers/PageWrapper";
 import MainHero from "./_components/MainHero";
 import Bestsellers from "./_components/Bestsellers";
-import ExpressHero from "./_components/ExpressHero";
+import CTA1 from "./_components/CTA1";
 import Benefits from "./_components/Benefits";
 import NewReleases from "./_components/NewReleases";
-import Solace from "./_components/Solace";
+import CTA2 from "./_components/CTA2";
 
 export default function Home() {
   return (
     <PageWrapper>
       <MainHero />
       <Bestsellers />
-      <ExpressHero />
+      <CTA1 />
       <Benefits />
       <NewReleases />
-      <Solace />
+      <CTA2 />
     </PageWrapper>
   );
 }
