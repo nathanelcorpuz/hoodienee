@@ -7,6 +7,11 @@ export interface ThemeContextInterface {
   setTheme: (str: Theme) => void;
 }
 
+export interface ProductsContextInterface {
+  filters: string[];
+  setFilters: (stringArray: string[]) => void;
+}
+
 export interface HeaderControls {
   openCart: () => void;
   openSearch: () => void;

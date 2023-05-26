@@ -62,6 +62,37 @@ export const benefits = [
   },
 ];
 
+export const headerMenuLinks: CommonLink[] = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/products",
+    text: "Products",
+  },
+  {
+    href: "/collections",
+    text: "Collections",
+  },
+  {
+    href: "/cart",
+    text: "Cart",
+  },
+  {
+    href: "/about",
+    text: "About",
+  },
+  {
+    href: "/branches",
+    text: "Branches",
+  },
+  {
+    href: "/profile",
+    text: "Profile",
+  },
+];
+
 export const footerLink1: CommonLink[] = [
   {
     href: "/",
