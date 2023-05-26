@@ -1,4 +1,5 @@
 import { TextareaHTMLAttributes, LabelHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function TextArea({
   className = "",
@@ -17,10 +18,10 @@ export default function TextArea({
         {label}
       </label>
       <textarea
-        className={`
+        className={twMerge(`
       border border-gray-600
       bg-white p-2
-      dark:bg-black ${className}`}
+      dark:bg-black ${className}`)}
         rows={8}
         id={label}
         {...props}

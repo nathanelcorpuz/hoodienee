@@ -1,4 +1,5 @@
 import { InputHTMLAttributes, LabelHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Input({
   className = "",
@@ -17,10 +18,10 @@ export default function Input({
         {label}
       </label>
       <input
-        className={`
+        className={twMerge(`
       h-[40px] border border-gray-600
       bg-white p-2
-      dark:bg-black ${className}`}
+      dark:bg-black ${className}`)}
         id={label}
         {...props}
       />

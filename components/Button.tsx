@@ -1,5 +1,8 @@
+"use client";
+
 import { ButtonVariant } from "@/lib/types";
 import { ButtonHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Button({
   children,
@@ -12,55 +15,29 @@ export default function Button({
   variant?: ButtonVariant;
   props?: ButtonHTMLAttributes<HTMLButtonElement>;
 }) {
+  const commonClasses = "mx-auto w-[100%] uppercase font-black";
+
+  let classes = twMerge(`${commonClasses} 
+  bg-black px-6 py-3 text-lg text-white
+  dark:bg-white dark:text-black ${className}`);
+
   if (variant === 2) {
-    return (
-      <button
-        className={`mx-auto w-[100%] 
-      border border-white bg-none px-6
-      py-3 text-lg 
-      font-black uppercase
-      text-black dark:text-white ${className}`}
-        {...props}
-      >
-        {children}
-      </button>
-    );
+    classes = `${commonClasses} 
+    border border-white bg-none px-6
+    py-3 text-lg text-black dark:text-white ${className}`;
   }
   if (variant === 3) {
-    return (
-      <button
-        className={`mx-auto w-[100%] 
-      bg-black px-4 py-2 
-      font-black uppercase text-white
-      dark:bg-white dark:text-black ${className}`}
-        {...props}
-      >
-        {children}
-      </button>
-    );
+    classes = `${commonClasses}  
+    bg-black px-4 py-2 text-white 
+    dark:bg-white dark:text-black ${className}`;
   }
   if (variant === 4) {
-    return (
-      <button
-        className={`mx-auto w-[100%] 
-        border border-white bg-none px-4 py-2 
-      font-black uppercase 
-      text-black dark:text-white ${className}`}
-        {...props}
-      >
-        {children}
-      </button>
-    );
+    classes = `${commonClasses} 
+    border border-white bg-none px-4 py-2
+    text-black dark:text-white ${className}`;
   }
   return (
-    <button
-      className={`mx-auto w-[100%] 
-    bg-black px-6 py-3 text-lg
-    font-black
-    uppercase text-white
-    dark:bg-white dark:text-black ${className}`}
-      {...props}
-    >
+    <button className={classes} {...props}>
       {children}
     </button>
   );

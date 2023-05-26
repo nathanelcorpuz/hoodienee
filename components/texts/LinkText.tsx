@@ -1,5 +1,6 @@
 import { TextVariant } from "@/lib/types";
 import Link, { LinkProps } from "next/link";
+import { twMerge } from "tailwind-merge";
 
 export default function LinkText({
   children,
@@ -19,7 +20,9 @@ export default function LinkText({
   if (variant === 1) {
     return (
       <Link
-        className={`${commonClasses} text-lg underline-offset-8 ${className}`}
+        className={twMerge(
+          `${commonClasses} text-lg underline-offset-8 ${className}`
+        )}
         href={href}
         {...props}
       >
@@ -31,7 +34,9 @@ export default function LinkText({
   if (variant === 2) {
     return (
       <Link
-        className={`${commonClasses} text-lg underline-offset-4 ${className}`}
+        className={twMerge(
+          `${commonClasses} text-lg underline-offset-4 ${className}`
+        )}
         href={href}
         {...props}
       >
@@ -43,7 +48,7 @@ export default function LinkText({
   if (variant === 3) {
     return (
       <Link
-        className={`${commonClasses} underline-offset-8 ${className}`}
+        className={twMerge(`${commonClasses} underline-offset-8 ${className}`)}
         href={href}
         {...props}
       >
@@ -55,7 +60,7 @@ export default function LinkText({
   if (variant === 4) {
     return (
       <Link
-        className={`${commonClasses} underline-offset-4 ${className}`}
+        className={twMerge(`${commonClasses} underline-offset-4 ${className}`)}
         href={href}
         {...props}
       >
@@ -67,7 +72,9 @@ export default function LinkText({
   if (variant === 5) {
     return (
       <Link
-        className={`${commonClasses} text-sm underline-offset-8 ${className}`}
+        className={twMerge(
+          `${commonClasses} text-sm underline-offset-8 ${className}`
+        )}
         href={href}
         {...props}
       >
@@ -78,7 +85,9 @@ export default function LinkText({
 
   return (
     <Link
-      className={`${commonClasses} text-xs underline-offset-4 ${className}`}
+      className={twMerge(
+        `${commonClasses} text-xs underline-offset-4 ${className}`
+      )}
       href={href}
       {...props}
     >
