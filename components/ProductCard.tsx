@@ -3,17 +3,20 @@ import Image, { StaticImageData } from "next/image";
 import StandardText from "@/components/texts/StandardText";
 import SupportText from "@/components/texts/SupportText";
 import addToCartIcon from "@/public/icons/add-to-cart.png";
+import { useRouter } from "next/navigation";
 
 export default function ProductCard({
   img = sample,
 }: {
   img?: StaticImageData | string;
 }) {
+  const router = useRouter();
   return (
     <div className="flex w-[100%] shrink-0 flex-col items-center gap-[5px]">
       <div
         className="relative h-[150px] w-[80%] 
         border border-gray-700"
+        onClick={() => router.push("/products/really-awesome-hoodie")}
       >
         <Image
           src={img}

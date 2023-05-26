@@ -51,3 +51,8 @@ export interface CommonLink {
   href: string;
   text: string;
 }
+
+export interface DropdownSelection {
+  value: string;
+  label: string;
+}
