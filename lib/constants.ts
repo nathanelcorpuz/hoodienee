@@ -8,6 +8,7 @@ import productImg7 from "@/public/square/7.png";
 import triangle from "@/public/icons/triangle.png";
 import circle from "@/public/icons/circle.png";
 import square from "@/public/icons/square.png";
+import { CommonLink } from "./types";
 
 export const sampleFetchedProducts = [
   {
@@ -58,5 +59,77 @@ export const benefits = [
     alt: "triangle icon",
     title: "Expert Craftmanship",
     subtitle: "Meticulously made",
+  },
+];
+
+export const footerLink1: CommonLink[] = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/about",
+    text: "About",
+  },
+  {
+    href: "/branches",
+    text: "Branches",
+  },
+  {
+    href: "/contact",
+    text: "Contact",
+  },
+];
+
+export const footerLink2: CommonLink[] = [
+  {
+    href: "/hoodies",
+    text: "Hoodies",
+  },
+  {
+    href: "/collections",
+    text: "Collections",
+  },
+  {
+    href: "/collections/featured",
+    text: "Featured",
+  },
+  {
+    href: "/collections/bestsellers",
+    text: "Bestsellers",
+  },
+];
+
+export const footerLink3: CommonLink[] = [
+  {
+    href: "/terms",
+    text: "Terms",
+  },
+  {
+    href: "/privacy",
+    text: "Privacy",
+  },
+  {
+    href: "/faqs",
+    text: "FAQs",
+  },
+  {
+    href: "/login",
+    text: "Login",
+  },
+];
+
+export const socialLinks: CommonLink[] = [
+  {
+    href: "/",
+    text: "Twitter",
+  },
+  {
+    href: "/",
+    text: "LinkedIn",
+  },
+  {
+    href: "/",
+    text: "Instagram",
   },
 ];

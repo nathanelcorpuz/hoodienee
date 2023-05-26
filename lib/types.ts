@@ -39,3 +39,8 @@ export interface BenefitProps {
     subtitle: string;
   };
 }
+
+export interface CommonLink {
+  href: string;
+  text: string;
+}

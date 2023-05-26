@@ -6,7 +6,7 @@ export default function LinkText({
   props,
   href = "",
   className,
-  variant = 6,
+  variant = 5,
 }: {
   children: React.ReactNode;
   props?: Omit<LinkProps, "href">;
