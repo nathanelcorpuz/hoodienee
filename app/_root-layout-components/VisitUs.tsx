@@ -21,7 +21,7 @@ export default function VisitUs() {
         </div>
         <StandardText>Weekdays, 8 AM - 8 PM, PST</StandardText>
       </div>
-      <Button>Branches</Button>
+      <Button className="w-[fit-content]">Branches</Button>
     </section>
   );
 }
