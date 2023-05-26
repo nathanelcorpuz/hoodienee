@@ -4,7 +4,7 @@ import LinkText from "@/components/texts/LinkText";
 import { headerMenuLinks } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 
-export default function Menu() {
+export default function Menu({ toggleMenu }: { toggleMenu: () => void }) {
   const router = useRouter();
   return (
     <div className="flex flex-col">
@@ -15,7 +15,10 @@ export default function Menu() {
         <p
           key={link.href}
           className="p-3"
-          onClick={() => router.push(link.href)}
+          onClick={() => {
+            router.push(link.href);
+            toggleMenu();
+          }}
         >
           {link.text}
         </p>
