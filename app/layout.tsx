@@ -6,6 +6,8 @@ import "@/styles/globals.css";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Providers from "providers/Providers";
+import VisitUs from "./_root-layout-components/VisitUs";
+import CommonSections from "./_root-layout-components/CommonSections";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,6 +35,7 @@ export default async function RootLayout({
               <Header />
               {modal}
               {children}
+              <CommonSections />
               <Footer />
             </RootLayoutWrapper>
           </ThemeWrapper>
