@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { RefObject } from "react";
 
 export type Theme = "dark" | "light";
 
@@ -35,9 +36,22 @@ export interface FetchedProduct {
   img: StaticImageData | string;
 }
 
-export interface ProductCarouselProps {
-  products: FetchedProduct[];
+export interface CarouselHookProps {
+  list: FetchedProduct[];
+}
+
+export interface CarouselHook {
+  ref: RefObject<HTMLDivElement>;
+  focusedItemIndex: number;
+  handleScrollLeft: () => void;
+  handleScrollRight: () => void;
+  list: any[];
+}
+
+export interface CarouselProps {
+  controls: CarouselHook;
   heading: string;
+  isCategory?: boolean;
 }
 
 export interface BenefitProps {

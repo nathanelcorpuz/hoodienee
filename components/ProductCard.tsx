@@ -4,6 +4,7 @@ import StandardText from "@/components/texts/StandardText";
 import SupportText from "@/components/texts/SupportText";
 import addToCartIcon from "@/public/icons/add-to-cart.png";
 import { useRouter } from "next/navigation";
+import CardWrapper from "./wrappers/CardWrapper";
 
 export default function ProductCard({
   img = sample,
@@ -12,7 +13,7 @@ export default function ProductCard({
 }) {
   const router = useRouter();
   return (
-    <div className="flex w-[100%] shrink-0 flex-col items-center gap-[5px]">
+    <CardWrapper>
       <div
         className="relative h-[150px] w-[80%] 
         border border-gray-700"
@@ -42,6 +43,6 @@ export default function ProductCard({
         <StandardText className="grow">Really Awesome Hoodie</StandardText>
         <SupportText>$70</SupportText>
       </div>
-    </div>
+    </CardWrapper>
   );
 }
