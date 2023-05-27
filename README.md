@@ -25,6 +25,40 @@ A Next.js E-commerce sample website using MongoDB and NextAuth
 6. PayPal
 7. Vercel
 
+## Directory Guide
+
+### > `app`
+
+--> _Contains components for root layout, components for home, and localized components per page_
+
+### > `components`
+
+--> _Contains the UI library for inputs, buttons, wrappers, and more_
+
+### > `hooks`
+
+--> _Contains all hooks_
+
+### > `lib`
+
+--> _Contains non-tsx code files used across all components and files of the entire project_
+
+### > `providers`
+
+--> _Contains all providers_
+
+### > `public`
+
+--> _Contains all project media assets_
+
+### > `styles`
+
+--> _Contains all CSS files_
+
+### > `utils`
+
+--> _Contains helper functions used across the entire project_
+
 ## Challenges
 
 _Constantly updated_
