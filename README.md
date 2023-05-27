@@ -1,4 +1,4 @@
-# _WIP_
+# 🏗️ _WIP_
 
 A Next.js E-commerce sample website using MongoDB and NextAuth
 
