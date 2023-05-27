@@ -15,7 +15,7 @@ export default function CategoryCard({
       <div
         className="relative h-[150px] w-[80%] 
         border border-gray-700"
-        onClick={() => router.push("/category/sporty")}
+        onClick={() => router.push("/collections/sporty")}
       >
         <Image
           src={img}
