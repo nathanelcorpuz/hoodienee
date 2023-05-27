@@ -71,7 +71,10 @@ export default function Dropdown({
     selectionLabel = forcedSelection.label;
   }
   return (
-    <div ref={dropdownRef} className={`${disabled ? "opacity-[0.5]" : ""}`}>
+    <div
+      ref={dropdownRef}
+      className={`flex flex-col gap-[5px] ${disabled ? "opacity-[0.5]" : ""}`}
+    >
       <SupportText className="uppercase">{label}</SupportText>
       <div
         className={`relative cursor-pointer border border-gray-600 
