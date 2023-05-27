@@ -15,7 +15,9 @@ export default function LinkText({
   className?: string | undefined;
   variant?: TextVariant;
 }) {
-  const commonClasses = "underline font-bold text-gray-400";
+  const commonClasses = `
+  block underline 
+  font-bold text-gray-400`;
 
   if (variant === 1) {
     return (

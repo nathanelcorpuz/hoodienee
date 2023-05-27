@@ -1,7 +1,6 @@
 "use client";
 
 import Dropdown from "@/components/inputs/Dropdown";
-import HeadingText from "@/components/texts/HeadingText";
 import StandardText from "@/components/texts/StandardText";
 import SupportText from "@/components/texts/SupportText";
 import PageWrapper from "@/components/wrappers/PageWrapper";
