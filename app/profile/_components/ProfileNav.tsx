@@ -1,6 +1,9 @@
+"use client";
+
 import LinkText from "@/components/texts/LinkText";
 
 export default function ProfileNav() {
+  // WIP
   return (
     <nav className="flex border-b border-b-gray-700">
       <LinkText className="px-8 py-4 no-underline" href="/profile/information">
