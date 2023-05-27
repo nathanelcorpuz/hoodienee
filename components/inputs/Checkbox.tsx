@@ -35,7 +35,7 @@ export default function Checkbox({
         )}
         {...inputProps}
       />
-      <label htmlFor="category1" {...labelProps}>
+      <label htmlFor="collection1" {...labelProps}>
         {label}
       </label>
     </div>

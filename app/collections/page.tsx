@@ -15,9 +15,9 @@ export default function CollectionsPage() {
       <StandardText className="text-center">
         Check out our trending collections!
       </StandardText>
-      <Carousel controls={genderControls} heading="Gender" isCategory />
-      <Carousel controls={styleControls} heading="Style" isCategory />
-      <Carousel controls={colorControls} heading="Color" isCategory />
+      <Carousel controls={genderControls} heading="Gender" isCollection />
+      <Carousel controls={styleControls} heading="Style" isCollection />
+      <Carousel controls={colorControls} heading="Color" isCollection />
     </PageWrapper>
   );
 }

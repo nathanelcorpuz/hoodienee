@@ -4,7 +4,7 @@ import SupportText from "@/components/texts/SupportText";
 import { useRouter } from "next/navigation";
 import CardWrapper from "./wrappers/CardWrapper";
 
-export default function CategoryCard({
+export default function CollectionCard({
   img = sample,
 }: {
   img?: StaticImageData | string;

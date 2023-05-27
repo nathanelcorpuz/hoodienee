@@ -4,12 +4,12 @@ import ProductCard from "./ProductCard";
 import arrowLeft from "@/public/icons/arrow-left.png";
 import arrowRight from "@/public/icons/arrow-right.png";
 import Image from "next/image";
-import CategoryCard from "./CategoryCard";
+import CollectionCard from "./CollectionCard";
 
 export default function Carousel({
   controls,
   heading,
-  isCategory = false,
+  isCollection = false,
 }: CarouselProps) {
   const { ref, focusedItemIndex, handleScrollLeft, handleScrollRight, list } =
     controls;
@@ -20,8 +20,8 @@ export default function Carousel({
         <HeadingText>{heading}</HeadingText>
         <div ref={ref} className="flex w-[100%] overflow-hidden py-8">
           {list.map(({ _id, img }) =>
-            isCategory ? (
-              <CategoryCard key={_id} img={img} />
+            isCollection ? (
+              <CollectionCard key={_id} img={img} />
             ) : (
               <ProductCard key={_id} img={img} />
             )

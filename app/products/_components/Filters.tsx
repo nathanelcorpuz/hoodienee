@@ -31,13 +31,13 @@ export default function Filters() {
     border-t border-t-gray-600 p-4
   `}
       >
-        <Checkbox id="category1" label="Category 1" value="category1" />
-        <Checkbox id="category2" label="Category 2" value="category2" />
-        <Checkbox id="category3" label="Category 3" value="category3" />
-        <Checkbox id="category4" label="Category 4" value="category4" />
-        <Checkbox id="category5" label="Category 5" value="category5" />
-        <Checkbox id="category6" label="Category 6" value="category6" />
-        <Checkbox id="category7" label="Category 7" value="category7" />
+        <Checkbox id="collection1" label="Collection 1" value="collection1" />
+        <Checkbox id="collection2" label="Collection 2" value="collection2" />
+        <Checkbox id="collection3" label="Collection 3" value="collection3" />
+        <Checkbox id="collection4" label="Collection 4" value="collection4" />
+        <Checkbox id="collection5" label="Collection 5" value="collection5" />
+        <Checkbox id="collection6" label="Collection 6" value="collection6" />
+        <Checkbox id="collection7" label="Collection 7" value="collection7" />
       </div>
     </div>
   );

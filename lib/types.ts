@@ -51,7 +51,7 @@ export interface CarouselHook {
 export interface CarouselProps {
   controls: CarouselHook;
   heading: string;
-  isCategory?: boolean;
+  isCollection?: boolean;
 }
 
 export interface BenefitProps {
