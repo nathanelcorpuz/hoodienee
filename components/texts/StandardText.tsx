@@ -41,7 +41,7 @@ export default function StandardText({
     );
   }
   return (
-    <p className={twMerge(`${commonClasses} text-sm italic ${className}`)}>
+    <p className={twMerge(`${commonClasses} text-xs italic ${className}`)}>
       {children}
     </p>
   );
