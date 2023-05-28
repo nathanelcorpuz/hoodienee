@@ -10,7 +10,7 @@ import Carousel from "@/components/Carousel";
 export default function ProductPage() {
   const relatedControls = useCarousel({ list: sampleFetchedProducts });
   return (
-    <PageWrapper>
+    <PageWrapper className="gap-[50px]">
       <Product />
       <Reviews />
       <Carousel controls={relatedControls} heading="Related" />

@@ -1,4 +1,7 @@
 import PageWrapper from "@/components/wrappers/PageWrapper";
+import ReviewDetails from "../_components/ReviewDetails";
+import Link from "next/link";
+import Button from "@/components/Button";
 
 export default function ReviewPage({
   params,
@@ -8,7 +11,14 @@ export default function ReviewPage({
   const { slug, id } = params;
   return (
     <PageWrapper>
-      Review page for product slug: {slug} and review id: {id}
+      <div>
+        <ReviewDetails slug={slug} id={id} />
+        <div className="p-4">
+          <Link href="/products/really-awesome-hoodie">
+            <Button>Go to product</Button>
+          </Link>
+        </div>
+      </div>
     </PageWrapper>
   );
 }

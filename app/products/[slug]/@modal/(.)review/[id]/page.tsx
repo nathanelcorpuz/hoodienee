@@ -1,4 +1,7 @@
 import ModalWrapper from "@/components/wrappers/ModalWrapper";
+import ReviewDetails from "../../../review/_components/ReviewDetails";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 export default function ReviewModal({
   params,
@@ -8,7 +11,7 @@ export default function ReviewModal({
   const { slug, id } = params;
   return (
     <ModalWrapper>
-      Review page for product slug: {slug} and review id: {id}
+      <ReviewDetails id={id} slug={slug} />
     </ModalWrapper>
   );
 }

@@ -11,7 +11,7 @@ A Next.js E-commerce sample website using MongoDB and NextAuth
 ## Features
 
 1. Cloned from [Next.js Commerce](https://nextjs.org/commerce)
-2. Production-grade e-commerce website (WIP)
+2. E-commerce website (WIP)
 3. Custom CMS with Next.js and MongoDB
 4. Auth and image storage
 
