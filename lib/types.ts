@@ -1,5 +1,12 @@
 import { StaticImageData } from "next/image";
-import { RefObject } from "react";
+import {
+  Dispatch,
+  HTMLInputTypeAttribute,
+  InputHTMLAttributes,
+  LabelHTMLAttributes,
+  RefObject,
+  SetStateAction,
+} from "react";
 
 export type Theme = "dark" | "light";
 
@@ -71,4 +78,29 @@ export interface CommonLink {
 export interface DropdownSelection {
   value: string;
   label: string;
+}
+
+export interface InputProps {
+  className?: string;
+  labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
+  label?: string;
+  props?: InputHTMLAttributes<HTMLInputElement>;
+  icon?: StaticImageData | string;
+  onIconClick: () => any;
+}
+
+export interface FieldDisplayProps {
+  data: { heading: string; content: string };
+  toggleEdit: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface FieldDisplayInputProps {
+  controls: {
+    isOnEdit: boolean;
+    setIsOnEdit: Dispatch<SetStateAction<boolean>>;
+    type?: HTMLInputTypeAttribute;
+    label: string;
+    inputProps?: InputHTMLAttributes<HTMLInputElement>;
+    data: FieldDisplayProps["data"];
+  };
 }

@@ -1,6 +1,8 @@
+import { InputProps } from "@/lib/types";
 import Image, { StaticImageData } from "next/image";
 import { InputHTMLAttributes, LabelHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
+import SupportText from "../texts/SupportText";
 
 export default function Input({
   className = "",
@@ -9,18 +11,16 @@ export default function Input({
   label = "",
   icon = "",
   onIconClick,
-}: {
-  className?: string;
-  labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
-  label?: string;
-  props?: InputHTMLAttributes<HTMLInputElement>;
-  icon?: StaticImageData | string;
-  onIconClick: () => any;
-}) {
+}: InputProps) {
   return (
     <div className="flex w-[100%] flex-col">
       <label htmlFor={label} {...labelProps}>
-        {label}
+        <SupportText
+          variant={3}
+          className="pb-1 text-xs uppercase text-gray-400"
+        >
+          {label}
+        </SupportText>
       </label>
       <div className="flex">
         <input

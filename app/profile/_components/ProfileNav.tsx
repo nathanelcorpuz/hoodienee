@@ -4,7 +4,6 @@ import LinkText from "@/components/texts/LinkText";
 import { usePathname } from "next/navigation";
 
 export default function ProfileNav() {
-  // WIP
   const pathname = usePathname();
   const className = "px-8 py-4 no-underline";
   const activeClassName = `${className} border-b-8 border-b-white`;

@@ -2,19 +2,16 @@ import Image from "next/image";
 import StandardText from "./texts/StandardText";
 import SupportText from "./texts/SupportText";
 import pen from "@/public/icons/pen.png";
-import { Dispatch, SetStateAction } from "react";
+import { FieldDisplayProps } from "@/lib/types";
 
-export default function FieldDisplay({
-  data,
-  toggleEdit,
-}: {
-  data: { heading: string; content: string };
-  toggleEdit: Dispatch<SetStateAction<boolean>>;
-}) {
+export default function FieldDisplay({ data, toggleEdit }: FieldDisplayProps) {
   return (
     <div className="flex items-center justify-between gap-[20px] border-b border-b-gray-600 pb-4">
       <div>
-        <SupportText variant={3} className="text-xs uppercase">
+        <SupportText
+          variant={3}
+          className="pb-1 text-xs uppercase text-gray-400"
+        >
           {data.heading}
         </SupportText>
         <StandardText variant={2}>{data.content}</StandardText>
