@@ -1,3 +1,4 @@
+import Input from "@/components/inputs/Input";
 import InputWithIcon from "@/components/inputs/InputWithIcon";
 import HeadingText from "@/components/texts/HeadingText";
 import LinkText from "@/components/texts/LinkText";
@@ -9,8 +10,12 @@ export default function Newsletter() {
     <section className="flex flex-col items-center gap-[15px]">
       <HeadingText>Newsletter</HeadingText>
       <StandardText>Get the latest deals straight to your inbox</StandardText>
-      <InputWithIcon
-        props={{ placeholder: "Your email", id: "email", type: "email" }}
+      <Input
+        props={{
+          placeholder: "Your email",
+          id: "email",
+          type: "email",
+        }}
         icon={sendIcon}
       />
       <div className="flex justify-center gap-[25px]">
