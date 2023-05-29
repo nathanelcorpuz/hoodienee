@@ -9,15 +9,16 @@ import FieldsWrapper from "@/components/wrappers/FieldsWrapper";
 import FieldDisplayInput from "@/components/FieldDisplayInput";
 
 export default function ProfileInformationPage() {
-  const [isNameFieldOnEdit, setIsNameFieldOnEdit] = useState(false);
-  const [isEmailFieldOnEdit, setIsEmailFieldOnEdit] = useState(false);
+  const [isNameOnEdit, setIsNameOnEdit] = useState(false);
+  const [isEmailOnEdit, setIsEmailOnEdit] = useState(false);
+  const [isContactNumberOnEdit, setIsContactNumberOnEdit] = useState(false);
   return (
     <PageWrapper>
       <FieldsWrapper>
         <FieldDisplayInput
           controls={{
-            isOnEdit: isNameFieldOnEdit,
-            setIsOnEdit: setIsNameFieldOnEdit,
+            isOnEdit: isNameOnEdit,
+            setIsOnEdit: setIsNameOnEdit,
             label: "Name",
             data: {
               heading: "Name",
@@ -27,13 +28,25 @@ export default function ProfileInformationPage() {
         />
         <FieldDisplayInput
           controls={{
-            isOnEdit: isEmailFieldOnEdit,
-            setIsOnEdit: setIsEmailFieldOnEdit,
+            isOnEdit: isEmailOnEdit,
+            setIsOnEdit: setIsEmailOnEdit,
             label: "Email",
             type: "email",
             data: {
               heading: "Email",
               content: "edna@mail.com",
+            },
+          }}
+        />
+        <FieldDisplayInput
+          controls={{
+            isOnEdit: isContactNumberOnEdit,
+            setIsOnEdit: setIsContactNumberOnEdit,
+            label: "Contact Number",
+            type: "text",
+            data: {
+              heading: "Contact Number",
+              content: "202-404-8080",
             },
           }}
         />

@@ -11,7 +11,7 @@ export default function FieldDisplayInput({
     <Input
       label={label}
       icon={send}
-      props={{ type: type || "text", ...inputProps }}
+      props={{ type: type || "text", value: data.content, ...inputProps }}
       onIconClick={() => setIsOnEdit(false)}
     />
   ) : (

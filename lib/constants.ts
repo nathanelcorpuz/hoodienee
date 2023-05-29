@@ -88,7 +88,7 @@ export const headerMenuLinks: CommonLink[] = [
     text: "Branches",
   },
   {
-    href: "/profile",
+    href: "/profile/information",
     text: "Profile",
   },
 ];
