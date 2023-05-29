@@ -1,6 +1,5 @@
 import { InputProps } from "@/lib/types";
-import Image, { StaticImageData } from "next/image";
-import { InputHTMLAttributes, LabelHTMLAttributes } from "react";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import SupportText from "../texts/SupportText";
 
@@ -31,12 +30,14 @@ export default function Input({
           id={label}
           {...props}
         />
-        <div
-          className="flex w-[40px] items-center justify-center border border-gray-600"
-          onClick={onIconClick}
-        >
-          <Image src={icon} alt="input icon" width={12} height={12} />
-        </div>
+        {icon !== "" ? (
+          <div
+            className="flex w-[40px] items-center justify-center border border-gray-600"
+            onClick={onIconClick}
+          >
+            <Image src={icon} alt="input icon" width={12} height={12} />
+          </div>
+        ) : null}
       </div>
     </div>
   );
