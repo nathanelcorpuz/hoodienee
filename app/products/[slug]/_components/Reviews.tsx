@@ -1,4 +1,3 @@
-// WIP
 "use client";
 
 import HeadingText from "@/components/texts/HeadingText";
