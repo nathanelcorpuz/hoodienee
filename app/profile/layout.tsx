@@ -1,8 +1,9 @@
 "use client";
 
 import LayoutWrapper from "@/components/wrappers/LayoutWrapper";
-import ProfileNav from "./_components/ProfileNav";
 import { usePathname } from "next/navigation";
+import Nav from "@/components/Nav";
+import { profileLinks } from "@/lib/constants";
 
 export default function Layout({
   children,
@@ -18,7 +19,7 @@ export default function Layout({
   const pathname = usePathname();
   return (
     <LayoutWrapper className="pt-[40.5px]">
-      <ProfileNav />
+      <Nav links={profileLinks} />
       {pathname === "/profile" && children}
       {pathname === "/profile/information" && profile}
       {pathname === "/profile/shipping" && shipping}

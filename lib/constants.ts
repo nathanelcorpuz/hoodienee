@@ -164,3 +164,33 @@ export const socialLinks: CommonLink[] = [
     text: "Instagram",
   },
 ];
+
+export const profileLinks: CommonLink[] = [
+  {
+    href: "/profile/information",
+    text: "Profile",
+  },
+  {
+    href: "/profile/shipping",
+    text: "Shipping",
+  },
+  {
+    href: "/profile/settings",
+    text: "Settings",
+  },
+];
+
+export const checkoutLinks: CommonLink[] = [
+  {
+    href: "/checkout/cart",
+    text: "Cart",
+  },
+  {
+    href: "/checkout/shipping",
+    text: "Shipping",
+  },
+  {
+    href: "/checkout/payment",
+    text: "Payment",
+  },
+];
