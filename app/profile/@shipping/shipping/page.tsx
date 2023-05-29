@@ -1,11 +1,8 @@
 "use client";
 
-import FieldDisplay from "@/components/FieldDisplay";
-import Input from "@/components/inputs/Input";
 import FieldsWrapper from "@/components/wrappers/FieldsWrapper";
 import PageWrapper from "@/components/wrappers/PageWrapper";
 import { useState } from "react";
-import send from "@/public/icons/send.png";
 import FieldDisplayInput from "@/components/FieldDisplayInput";
 
 export default function ShippingPage() {
