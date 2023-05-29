@@ -2,6 +2,7 @@
 
 import useClickOutside from "@/hooks/useClickOutside";
 import { useRouter } from "next/navigation";
+import HeadingText from "../texts/HeadingText";
 
 export default function ModalWrapper({
   children,
@@ -32,7 +33,7 @@ export default function ModalWrapper({
         dark:bg-black"
       >
         <div className="flex justify-between">
-          <p className="p-2 font-black">{heading}</p>
+          <HeadingText className="p-2">{heading}</HeadingText>
           <button
             className="p-2 text-gray-600 dark:text-gray-400"
             onClick={() =>
