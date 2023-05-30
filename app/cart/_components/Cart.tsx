@@ -2,13 +2,14 @@
 import { useRouter } from "next/navigation";
 import CartItem from "./CartItem";
 import Button from "@/components/Button";
+import SupportText from "@/components/texts/SupportText";
 
 export default function Cart({
   toggleCart = () => {},
-  isFromCheckout = false,
+  shouldUseRouter = false,
 }: {
   toggleCart?: () => void;
-  isFromCheckout?: boolean;
+  shouldUseRouter?: boolean;
 }) {
   const router = useRouter();
   return (
@@ -19,15 +20,22 @@ export default function Cart({
       <CartItem />
       <CartItem />
       <div className="flex justify-between p-4">
-        <p
-          className="p-2 text-gray-600 
-          underline dark:text-gray-400"
+        <SupportText
+          className="underline underline-offset-4"
           // orig until github issue gets fixed
           // onClick={() => router.back()}
-          onClick={() => toggleCart()}
+          props={{
+            onClick: () => {
+              if (shouldUseRouter) {
+                router.back();
+                return;
+              }
+              toggleCart();
+            },
+          }}
         >
           Back
-        </p>
+        </SupportText>
         <div className="flex gap-[10px] p-2">
           <p
             className="text-gray-600 
@@ -42,7 +50,7 @@ export default function Cart({
         <Button
           props={{
             onClick: () => {
-              if (isFromCheckout) {
+              if (shouldUseRouter) {
                 router.push("/checkout/shipping");
                 return;
               }
@@ -52,7 +60,7 @@ export default function Cart({
             },
           }}
         >
-          {isFromCheckout ? "Shipping" : "Checkout"}
+          {shouldUseRouter ? "Shipping" : "Checkout"}
         </Button>
       </div>
     </>

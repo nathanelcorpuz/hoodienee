@@ -66,7 +66,10 @@ export default function HeaderLinks2({
           isIntercept={false}
           closeModal={headerControls.toggleMenu}
         >
-          <Menu toggleMenu={headerControls.toggleMenu} />
+          <Menu
+            toggleCart={headerControls.toggleCart}
+            toggleMenu={headerControls.toggleMenu}
+          />
         </ModalWrapper>
       )}
       {headerControls.isCartOpen && (

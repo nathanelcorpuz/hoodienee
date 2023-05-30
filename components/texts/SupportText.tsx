@@ -5,6 +5,7 @@ export default function SupportText({
   children,
   variant = 1,
   className,
+  props,
 }: TextComponent) {
   const commonClasses = "text-gray-300";
   if (variant === 1) {
@@ -13,6 +14,7 @@ export default function SupportText({
         className={twMerge(
           `${commonClasses} font-bold tracking-widest ${className}`
         )}
+        {...props}
       >
         {children}
       </p>
@@ -24,6 +26,7 @@ export default function SupportText({
         className={twMerge(
           `${commonClasses} text-sm font-bold tracking-widest ${className}`
         )}
+        {...props}
       >
         {children}
       </p>
@@ -35,6 +38,7 @@ export default function SupportText({
         className={twMerge(
           `${commonClasses} text-sm font-bold tracking-wider ${className}`
         )}
+        {...props}
       >
         {children}
       </p>
@@ -42,20 +46,26 @@ export default function SupportText({
   }
   if (variant === 4) {
     return (
-      <p className={twMerge(`${commonClasses} italic ${className}`)}>
+      <p className={twMerge(`${commonClasses} italic ${className}`)} {...props}>
         {children}
       </p>
     );
   }
   if (variant === 5) {
     return (
-      <p className={twMerge(`${commonClasses} text-sm italic ${className}`)}>
+      <p
+        className={twMerge(`${commonClasses} text-sm italic ${className}`)}
+        {...props}
+      >
         {children}
       </p>
     );
   }
   return (
-    <p className={twMerge(`${commonClasses} text-xs italic ${className}`)}>
+    <p
+      className={twMerge(`${commonClasses} text-xs italic ${className}`)}
+      {...props}
+    >
       {children}
     </p>
   );

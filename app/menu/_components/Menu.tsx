@@ -1,10 +1,15 @@
 "use client";
 
-import LinkText from "@/components/texts/LinkText";
 import { headerMenuLinks } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 
-export default function Menu({ toggleMenu }: { toggleMenu: () => void }) {
+export default function Menu({
+  toggleMenu,
+  toggleCart,
+}: {
+  toggleMenu: () => void;
+  toggleCart: () => any;
+}) {
   const router = useRouter();
   return (
     <div className="flex flex-col">

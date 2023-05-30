@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import {
+  AllHTMLAttributes,
   Dispatch,
   HTMLInputTypeAttribute,
   InputHTMLAttributes,
@@ -40,6 +41,7 @@ export interface TextComponent {
   children: React.ReactNode;
   variant?: TextVariant;
   className?: string;
+  props?: AllHTMLAttributes<HTMLParagraphElement>;
 }
 
 export interface FetchedProduct {
