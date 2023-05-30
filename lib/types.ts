@@ -22,8 +22,12 @@ export interface ProductsContextInterface {
 
 export interface HeaderControls {
   openCart: () => void;
+  // temp state-based cart until https://github.com/vercel/next.js/issues/49662 gets fixed
+  isCartOpen: boolean;
+  toggleCart: () => void;
   openSearch: () => void;
   openMenu: () => void;
+  // temp state-based menu until https://github.com/vercel/next.js/issues/49662 gets fixed
   toggleMenu: () => void;
   isMenuOpen: boolean;
 }

@@ -11,6 +11,7 @@ import IconButton from "../../components/IconButton";
 import { HeaderControls } from "@/lib/types";
 import ModalWrapper from "@/components/wrappers/ModalWrapper";
 import Menu from "../menu/_components/Menu";
+import Cart from "../cart/_components/Cart";
 
 export default function HeaderLinks2({
   headerControls,
@@ -24,7 +25,15 @@ export default function HeaderLinks2({
   return (
     <>
       <div className="flex">
-        <IconButton props={{ onClick: headerControls.openCart }}>
+        {/* original url-based cart modal until https://github.com/vercel/next.js/issues/49662 gets fixed */}
+        {/* <IconButton props={{ onClick: headerControls.openCart }}>
+          {isThemeDark ? (
+            <Image src={cart} alt="cart icon" width={15} height={15} />
+          ) : (
+            <Image src={cartDark} alt="cart dark icon" width={15} height={15} />
+          )}
+        </IconButton> */}
+        <IconButton props={{ onClick: headerControls.toggleCart }}>
           {isThemeDark ? (
             <Image src={cart} alt="cart icon" width={15} height={15} />
           ) : (
@@ -58,6 +67,14 @@ export default function HeaderLinks2({
           closeModal={headerControls.toggleMenu}
         >
           <Menu toggleMenu={headerControls.toggleMenu} />
+        </ModalWrapper>
+      )}
+      {headerControls.isCartOpen && (
+        <ModalWrapper
+          isIntercept={false}
+          closeModal={headerControls.toggleCart}
+        >
+          <Cart toggleCart={headerControls.toggleCart} />
         </ModalWrapper>
       )}
     </>

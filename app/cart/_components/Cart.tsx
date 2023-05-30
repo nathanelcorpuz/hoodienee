@@ -3,7 +3,13 @@ import { useRouter } from "next/navigation";
 import CartItem from "./CartItem";
 import Button from "@/components/Button";
 
-export default function Cart() {
+export default function Cart({
+  toggleCart = () => {},
+  isFromCheckout = false,
+}: {
+  toggleCart?: () => void;
+  isFromCheckout?: boolean;
+}) {
   const router = useRouter();
   return (
     <>
@@ -16,7 +22,9 @@ export default function Cart() {
         <p
           className="p-2 text-gray-600 
           underline dark:text-gray-400"
-          onClick={() => router.back()}
+          // orig until github issue gets fixed
+          // onClick={() => router.back()}
+          onClick={() => toggleCart()}
         >
           Back
         </p>
@@ -30,7 +38,23 @@ export default function Cart() {
           <p className="font-black">$500</p>
         </div>
       </div>
-      <Button>Checkout</Button>
+      <div className="mx-auto flex w-[80%]">
+        <Button
+          props={{
+            onClick: () => {
+              if (isFromCheckout) {
+                router.push("/checkout/shipping");
+                return;
+              }
+              router.push("/checkout/cart");
+              // temp until github issue gets fixed
+              toggleCart();
+            },
+          }}
+        >
+          {isFromCheckout ? "Shipping" : "Checkout"}
+        </Button>
+      </div>
     </>
   );
 }

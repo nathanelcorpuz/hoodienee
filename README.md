@@ -66,7 +66,9 @@ _Constantly updated_
 ### Unable to use router.push or Link from an intercept route
 
 **Description**
-When implementing the menu modal from the root header, it doesn't dismiss when using a different client-side navigation routing other than router.back
+When implementing the menu modal from the root header, it doesn't dismiss when using a different client-side navigation routing other than router.back. Same with cart to checkout navigation.
 
 **Solution**
-Currently observing this GitHub issue: https://github.com/vercel/next.js/issues/49662
+
+- Currently observing this GitHub issue: https://github.com/vercel/next.js/issues/49662
+- Converting cart modal to non-url for now
