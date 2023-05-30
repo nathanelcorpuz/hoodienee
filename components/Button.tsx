@@ -17,9 +17,9 @@ export default function Button({
 }) {
   const commonClasses = "mx-auto w-[100%] uppercase font-black";
 
-  let classes = twMerge(`${commonClasses} 
+  let classes = `${commonClasses} 
   bg-black px-6 py-3 text-lg text-white
-  dark:bg-white dark:text-black ${className}`);
+  dark:bg-white dark:text-black ${className}`;
 
   if (variant === 2) {
     classes = `${commonClasses} 
@@ -37,7 +37,7 @@ export default function Button({
     text-black dark:text-white ${className}`;
   }
   return (
-    <button className={classes} {...props}>
+    <button className={twMerge(classes)} {...props}>
       {children}
     </button>
   );

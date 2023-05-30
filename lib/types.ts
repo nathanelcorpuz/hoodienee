@@ -90,7 +90,7 @@ export interface InputProps {
   label?: string;
   props?: InputHTMLAttributes<HTMLInputElement>;
   icon?: StaticImageData | string;
-  onIconClick: () => any;
+  onIconClick?: () => any;
 }
 
 export interface FieldDisplayProps {

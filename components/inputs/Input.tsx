@@ -1,3 +1,5 @@
+"use client";
+
 import { InputProps } from "@/lib/types";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
@@ -9,7 +11,7 @@ export default function Input({
   labelProps,
   label = "",
   icon = "",
-  onIconClick,
+  onIconClick = () => {},
 }: InputProps) {
   return (
     <div className="flex w-[100%] flex-col">
