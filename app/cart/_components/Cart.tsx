@@ -19,7 +19,7 @@ export default function Cart({
       <CartItem />
       <CartItem />
       <CartItem />
-      <div className="flex justify-between p-4">
+      <div className="flex items-center justify-between p-4">
         <SupportText
           className="underline underline-offset-4"
           // orig until github issue gets fixed
@@ -36,14 +36,14 @@ export default function Cart({
         >
           Back
         </SupportText>
-        <div className="flex gap-[10px] p-2">
+        <div className="flex items-center gap-[10px] p-2">
           <p
             className="text-gray-600 
           dark:text-gray-400"
           >
             Subtotal
           </p>
-          <p className="font-black">$500</p>
+          <p className="text-2xl font-black">$500</p>
         </div>
       </div>
       <div className="mx-auto flex w-[80%]">

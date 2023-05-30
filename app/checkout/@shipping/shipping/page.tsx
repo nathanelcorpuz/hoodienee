@@ -11,7 +11,7 @@ export default function ShippingPage() {
   const router = useRouter();
   return (
     <PageWrapper>
-      <FormWrapper>
+      <FormWrapper props={{ onClick: (e) => e.preventDefault() }}>
         <Input label="Street Address" />
         <Input label="City" />
         <Input label="State" />
@@ -25,7 +25,9 @@ export default function ShippingPage() {
           </SupportText>
           <Button
             className="m-0 w-[fit-content]"
-            props={{ onClick: () => router.push("/checkout/payment") }}
+            props={{
+              onClick: () => router.push("/checkout/payment"),
+            }}
           >
             Payment
           </Button>
